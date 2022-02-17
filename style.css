@@ -6,6 +6,7 @@ font-size: 62.6%;
 /*title part */
 .money-calculation-title{
     text-align: center;
+    color: green;
 }
 
 /* calculation section */
@@ -27,7 +28,7 @@ font-size: 62.6%;
     width: 75%;
 }
 
-.form-div{
+.calculation-div{
     background-color:rgb(226, 225, 225) ;
     margin-right: 5rem;
     text-align: center;
@@ -47,88 +48,34 @@ font-size: 62.6%;
 /* mobile responsive */
 
 @media only screen and (max-width:650px){
-html{
-    font-size: 50%;
-}
+    html{
+    font-size: 55%;
+    }
 
-.moneyCalculation{
+    .moneyCalculation{
     display: grid;
-    grid-template-columns:repeat( 1, 2fr);
-    grid-gap: 2rem;
+    grid-template-columns:repeat( 1, 1fr);
     margin-top: 2rem;   
-}
+    }
 
-.image-div{
+    .image-div{
     width: 100%;
     margin: 2.5rem;
-}
+    }
 
-/* .image-div image{
-    width: auto;
- } */
-
-.form-div{
-    background-color:rgb(226, 225, 225) ;
-    margin: 2rem;
-    text-align: center;
-    width: auto;
-}
-
-/* .form-div input{
-    height: 75%;
+    .image-div img{
+    margin-left: 5rem;
     width: 75%;
-} */
+    }
+
+    .calculation-div{
+    background-color:rgb(226, 225, 225) ;
+    text-align: center;
+    width: 75%;
+    margin: 8rem;
+    
+    }
 
 }
 
-@media only screen and (max-width:560px){
-html{
-    font-size: 36%;
-}
-
-
-}
-
-@media only screen and (max-width:500px){
-html{
-    font-size: 34%;
-}
-
-
-}
-
-/* mobile */
-
-@media only screen and (max-width:480px){
-html{
-    font-size: 32%;
-}
-
-}
-
-@media only screen and (max-width:400px){
-html{
-    font-size: 28%;
-}
-
-}
-
-@media only screen and (max-width:350px){
-html{
-font-size: 26%;
-}
-
-}
-
-@media only screen and (max-width:320px){
-html{
-   font-size: 24%;
-   }
-}
-
-@media only screen and (max-width:280px){
-html{
-   font-size: 22%;
-   }
-}
 
