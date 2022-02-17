@@ -20,6 +20,11 @@ font-size: 62.6%;
 .image-div{
     margin-left: 5rem;
     margin-top: 2rem;
+    width: 50%;
+}
+
+.image-div image{
+    width: 75%;
 }
 
 .form-div{
@@ -40,9 +45,90 @@ font-size: 62.6%;
 /* responsive code */
 
 /* mobile responsive */
-/* @media screen (min-width) {
-    .body{
 
-     } 
+@media only screen and (max-width:650px){
+html{
+    font-size: 50%;
+}
+
+.moneyCalculation{
+    display: grid;
+    grid-template-columns:repeat( 1, 2fr);
+    grid-gap: 2rem;
+    margin-top: 2rem;   
+}
+
+.image-div{
+    width: 100%;
+    margin: 2.5rem;
+}
+
+/* .image-div image{
+    width: auto;
+ } */
+
+.form-div{
+    background-color:rgb(226, 225, 225) ;
+    margin: 2rem;
+    text-align: center;
+    width: auto;
+}
+
+/* .form-div input{
+    height: 75%;
+    width: 75%;
 } */
+
+}
+
+@media only screen and (max-width:560px){
+html{
+    font-size: 36%;
+}
+
+
+}
+
+@media only screen and (max-width:500px){
+html{
+    font-size: 34%;
+}
+
+
+}
+
+/* mobile */
+
+@media only screen and (max-width:480px){
+html{
+    font-size: 32%;
+}
+
+}
+
+@media only screen and (max-width:400px){
+html{
+    font-size: 28%;
+}
+
+}
+
+@media only screen and (max-width:350px){
+html{
+font-size: 26%;
+}
+
+}
+
+@media only screen and (max-width:320px){
+html{
+   font-size: 24%;
+   }
+}
+
+@media only screen and (max-width:280px){
+html{
+   font-size: 22%;
+   }
+}
 
