@@ -45,11 +45,16 @@ document.getElementById('savingButton').addEventListener('click',function(){
     const SavingInput = document.getElementById('SavingInput');
     const Saving = parseInt(SavingInput.value) ;
 
+    // update saving amount
     const Save = document.getElementById('SavingAmount');
     Save.innerText =  IncomeAmount * Saving/ 100 ;
     const SavingAmount = Save.innerText;
 
-    const RemainingBalance = document.getElementById('remainingBalance');
-    RemainingBalance.innerText = IncomeAmount - SavingAmount ;
+
+    // update remaining balance
+    const BalanceAmount = document.getElementById('totalBalance').innerText;
+
+    const RemainingBalance = document.getElementById('RemainingBalance');
+    RemainingBalance.innerText = BalanceAmount - SavingAmount ;
 
 })
