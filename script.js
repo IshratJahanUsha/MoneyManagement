@@ -1,60 +1,80 @@
-// handle calculation button event
+function updateExpensesAndBalance(){
 
-document.getElementById('calculateButton').addEventListener('click',function(){
+    //Expenses calculation
+    const Rent =document.getElementById("rentCost-input") ;
+    const rentCost = parseFloat(Rent.value) ;
 
-// variables
+    const Food =document.getElementById("foodCost-input") ;
+    const foodCost = parseFloat(Food.value) ;
 
-    // income 
-    const Income = document.getElementById('income-input');
-    const IncomeAmount = parseInt(Income.value);
-
-    // expenses field
-    const Food = document.getElementById('foodCost-input');
-    const foodCost =parseInt(Food.value) ;
-
-    const Rent = document.getElementById('rentCost-input');
-    // const rentAmount = Rent.value;
-    const rentCost =parseInt(Rent.value) ;
-
-    const Others = document.getElementById('othersCost-input');
-    const othersCost =parseInt(Others.value) ;
-
-
-// calculation
-
-    // update total expenses & balance Cost
+    const Others =document.getElementById("othersCost-input") ;
+    const othersCost = parseFloat(Others.value) ;
 
     const Expenses = document.getElementById('expensesAmount');
     Expenses.innerText = foodCost + rentCost + othersCost ;
     const ExpensesAmount = Expenses.innerText;
 
-    const Balance = document.getElementById('totalBalance');
+    //balance calculation
+    const Income = document.getElementById("income-input") ;
+    const IncomeAmount = parseFloat(Income.value) ;
+
+    let Balance = document.getElementById('totalBalance');
     Balance.innerText = IncomeAmount - ExpensesAmount ;
- 
+
+    // error handling
+    if(ExpensesAmount > IncomeAmount){
+        window.alert('Expenses cannot be more than Income');
+        Balance.innerText = ''
+    }
+    else{
+        return Balance;
+    }
+
+}
+
+//Saving calculation
+function getSavingPercentage(){
+
+const Income = document.getElementById("income-input") ;
+const IncomeAmount = parseFloat(Income.value) ;
+
+const SavingInput = document.getElementById("SavingInput") ;
+const SavingPercentage = parseFloat(SavingInput.value) ;
+
+const SavingAmount = IncomeAmount * SavingPercentage / 100 ;
+document.getElementById('SavingAmount').innerText = SavingAmount ;
+
+return SavingAmount;
+
+}
+
+//button click events
+document.getElementById("calculateButton").addEventListener("click",function(){
+
+    updateExpensesAndBalance()
+
 })
 
 
-// handle save button event
+document.getElementById("savingButton").addEventListener("click",function(){
+const Savings = getSavingPercentage()
+const previousBalance = document.getElementById('totalBalance').innerText
 
-document.getElementById('savingButton').addEventListener('click',function(){
-    // variables
-    const Income = document.getElementById('income-input');
-    const IncomeAmount = parseInt(Income.value);
-    
-    // calculation 
-    const SavingInput = document.getElementById('SavingInput');
-    const Saving = parseInt(SavingInput.value) ;
+    // error handling
+    if(Savings > previousBalance){
 
-    // update saving amount
-    const Save = document.getElementById('SavingAmount');
-    Save.innerText =  IncomeAmount * Saving/ 100 ;
-    const SavingAmount = Save.innerText;
+        window.alert('Savings cannot be more than Balance')
+        document.getElementById("RemainingBalance").innerText = ''
+    }
 
+    else if (Savings <= previousBalance){
 
-    // update remaining balance
-    const BalanceAmount = document.getElementById('totalBalance').innerText;
+        const RemainingBalance = previousBalance - Savings ;
+        document.getElementById("RemainingBalance").innerText = RemainingBalance ;
 
-    const RemainingBalance = document.getElementById('RemainingBalance');
-    RemainingBalance.innerText = BalanceAmount - SavingAmount ;
+    }
 
 })
+
+
+

@@ -4,25 +4,22 @@ document.getElementById('calculateButton').addEventListener('click',function(){
 
     // variables
     
-        // income 
+    // income 
         const Income = document.getElementById('income-input');
         const IncomeAmount = parseInt(Income.value);
     
-        // expenses field
+    // expenses field
         const Food = document.getElementById('foodCost-input');
-        const foodCost =parseInt(Food.value) ;
+        const foodCost = parseInt(Food.value) ;
     
         const Rent = document.getElementById('rentCost-input');
-        // const rentAmount = Rent.value;
         const rentCost =parseInt(Rent.value) ;
     
         const Others = document.getElementById('othersCost-input');
-        const othersCost =parseInt(Others.value) ;
+        const othersCost = parseInt(Others.value) ;    
     
-    
-    // calculation
-    
-        // update total expenses & balance Cost
+    // calculation    
+    // update total expenses & balance Cost
     
         const Expenses = document.getElementById('expensesAmount');
         Expenses.innerText = foodCost + rentCost + othersCost ;
@@ -31,28 +28,33 @@ document.getElementById('calculateButton').addEventListener('click',function(){
         const Balance = document.getElementById('totalBalance');
         Balance.innerText = IncomeAmount - ExpensesAmount ;
      
-    })
+})
     
     
-    // handle save button event
+// handle save button event
     
-    document.getElementById('savingButton').addEventListener('click',function(){
-        // variables
+document.getElementById('savingButton').addEventListener('click',function(){
+    // variables
         const Income = document.getElementById('income-input');
         const IncomeAmount = parseInt(Income.value);
         
-        // calculation 
+    // calculation 
         const SavingInput = document.getElementById('SavingInput');
         const Saving = parseInt(SavingInput.value) ;
     
+    // update saving amount
         const Save = document.getElementById('SavingAmount');
         Save.innerText =  IncomeAmount * Saving/ 100 ;
         const SavingAmount = Save.innerText;
     
-        const RemainingBalance = document.getElementById('remainingBalance');
-        RemainingBalance.innerText = IncomeAmount - SavingAmount ;
     
-    })
+    // update remaining balance
+        const BalanceAmount = document.getElementById('totalBalance').innerText;
+    
+        const RemainingBalance = document.getElementById('RemainingBalance');
+        RemainingBalance.innerText = BalanceAmount - SavingAmount ;
+    
+})
 
 
 
@@ -71,10 +73,10 @@ document.getElementById('calculateButton').addEventListener('click',function(){
 // }
 
 
-if(Balance < Expenses){
-    window.alert('Expenses cannot be more than Balance')
-}
- else{
-    const Balance = document.getElementById('totalBalance');
-    Balance.innerText = IncomeAmount - ExpensesAmount ; 
- }
+// if(Balance < Expenses){
+//     window.alert('Expenses cannot be more than Balance')
+// }
+//  else{
+//     const Balance = document.getElementById('totalBalance');
+//     Balance.innerText = IncomeAmount - ExpensesAmount ; 
+//  }
