@@ -76,4 +76,40 @@ const previousBalance = document.getElementById('totalBalance').innerText
 
 })
 
+//  error handling(string & negNumber)
 
+document.getElementById('calculateButton').addEventListener('click',function(){
+
+    let InputField = document.getElementsByClassName('Input-Field').value ;
+    
+    if(isNaN(InputField) || InputField < 0){
+       alert('Input should be 0 or positive number')
+    }
+
+})
+
+document.getElementById('savingButton').addEventListener('click',function(){
+
+    let InputField = document.getElementsByClassName('Input-Field').value ;
+    
+    if(isNaN(InputField) || InputField < 0){
+       alert('Input should be 0 or positive number')
+    }
+
+})
+
+
+
+
+// function validation(){
+//     debugger
+
+//     let InputField = document.getElementsByClassName('Input-Field').value ;
+    
+//     if(isNaN(InputField) || InputField < 0){
+//        alert('Input should be 0 or positive number');
+//     }
+//     else{
+//         return InputField ;
+//     }
+// }

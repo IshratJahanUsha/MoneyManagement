@@ -67,16 +67,3 @@ document.getElementById('savingButton').addEventListener('click',function(){
 // if(foodCost | rentCost | othersCost < 0){
 //     window.alert('You can give only 0 or positive numbers')
 // }
-
-// if(Balance < Expenses){
-//     window.alert('Expenses cannot be more than Balance')
-// }
-
-
-// if(Balance < Expenses){
-//     window.alert('Expenses cannot be more than Balance')
-// }
-//  else{
-//     const Balance = document.getElementById('totalBalance');
-//     Balance.innerText = IncomeAmount - ExpensesAmount ; 
-//  }
