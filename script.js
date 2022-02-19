@@ -77,4 +77,3 @@ const previousBalance = document.getElementById('totalBalance').innerText
 })
 
 
-
